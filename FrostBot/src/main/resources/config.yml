@@ -1,0 +1,35 @@
+settings:
+  min-bots: 4                
+  max-bots: 12               
+  show-join-messages: true   
+  show-quit-messages: true   
+
+messages:
+  join: "&e%player% зашел на сервер."
+  quit: "&e%player% покинул сервер."
+
+bot-names:
+  - "Fixik_Play"
+  - "Mr_Donut"
+  - "Keksik33"
+  - "Tvoy_Koshmar"
+  - "Zero_Cool"
+  - "Pro_Gamer_RU"
+  - "Alinka_Malinka"
+  - "Danya_Top"
+  - "Sanya_Shaxat"
+  - "Noobik_v_almaze"
+  - "Dark_Rider"
+  - "Kotik_Наркотик"
+  - "Panda_Gamer"
+
+chat-phrases:
+  - "всем ку"
+  - "ку всем"
+  - "кто приютит? я адекват"
+  - "где тут шахту найти нормальную?"
+  - "пвп кто на спавне?"
+  - "админ чекни репорт плз"
+  - "ку"
+  - "как сделать приват регион?"
+  - "пойду за деревом"

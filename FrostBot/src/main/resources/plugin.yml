@@ -1,0 +1,4 @@
+name: FakePlayers
+version: 1.0
+main: my.fake.players.Main
+api-version: 1.16
