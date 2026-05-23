@@ -15,12 +15,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <!-- Официальный рабочий склад архивных ядер PaperMC -->
+        <repository>
+            <id>papermc-repo</id>
+            <url>https://papermc.io</url>
+        </repository>
+    </repositories>
+
     <dependencies>
-        <!-- Центральная независимая чат-библиотека Spigot, доступная всегда -->
+        <!-- Полноценная зависимость Paper-API для 1.16.5, которая вернет все методы -->
         <dependency>
-            <groupId>net.md-5</groupId>
-            <artifactId>bungeecord-chat</artifactId>
-            <version>1.16-R0.4</version>
+            <groupId>com.destroystokyo.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -34,10 +42,6 @@
                 <configuration>
                     <source>17</source>
                     <target>17</target>
-                    <compilerArgs>
-                        <arg>-proc:none</arg>
-                        <arg>-Xlint:none</arg>
-                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
