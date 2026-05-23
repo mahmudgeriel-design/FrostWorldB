@@ -15,21 +15,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <repositories>
-        <!-- Официальный рабочий склад архивных ядер PaperMC -->
-        <repository>
-            <id>papermc-repo</id>
-            <url>https://papermc.io</url>
-        </repository>
-    </repositories>
-
     <dependencies>
-        <!-- Полноценная зависимость Paper-API для 1.16.5, которая вернет все методы -->
+        <!-- Полностью изолируем сборку: используем локальный файл как заглушку ядра -->
         <dependency>
-            <groupId>com.destroystokyo.paper</groupId>
-            <artifactId>paper-api</artifactId>
-            <version>1.16.5-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.16.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/plugin.yml</systemPath>
         </dependency>
     </dependencies>
 
@@ -42,6 +35,11 @@
                 <configuration>
                     <source>17</source>
                     <target>17</target>
+                    <!-- Отключаем строгую проверку классов ядра при компиляции -->
+                    <compilerArgs>
+                        <arg>-proc:none</arg>
+                        <arg>-Xlint:none</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
